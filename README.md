@@ -27,3 +27,8 @@ php项目基于微信支付JS SDK和JS API的接入开发
 
 * [JSSDK demo示例代码下载](http://demo.open.weixin.qq.com/jssdk/sample.zip)
 
+### 注意点
+
+* 微信大小写非常敏感，timestamp和timeStamp以及appId和appid不要弄错，要在对的接口使用对的大小写，里面是混着用的。
+
+* 商户号和微信商户号要区分出来，也就是MCHID
