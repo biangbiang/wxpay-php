@@ -1,6 +1,7 @@
 <?php
 /**
 * 	配置账号信息
+*   首先应该新建一个WxPay.pub.config.php
 */
 
 class WxPayConfPub
