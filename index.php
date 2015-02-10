@@ -8,8 +8,7 @@ include_once("lib/WxpayClientPub.php");
 include_once("lib/UnifiedOrderPub.php");
 
 // 获取微信用户的openId，相信在接微信支付的时候，已经能够获取到openId了
-//$openId = "o5k3_xxxxxxxxxxxxxxxxxx";
-$openId = "o5k3_tt26wXBIePg-DqA8DMgffkk";
+$openId = "o5k3_xxxxxxxxxxxxxxxxxx";
 
 $appId = WxPayConfPub::APPID;
 $appSecret = WxPayConfPub::APPSECRET;
@@ -86,6 +85,7 @@ $payPackage['paySign'] = $paySign;
   });
 
   wx.ready(function () {
+    document.querySelector('#chooseWXPay').onclick = function () {
       wx.chooseWXPay({
           timestamp: <?php echo $payPackage["timeStamp"];?>,
           nonceStr: '<?php echo $payPackage["nonceStr"];?>',
@@ -97,6 +97,7 @@ $payPackage['paySign'] = $paySign;
             // Add Your Code Here If You Need
           }
       });
+    };
   });
 
   wx.error(function (res) {
