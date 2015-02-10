@@ -15,7 +15,11 @@ php项目基于微信支付JS SDK和JS API的接入开发
 
 * [微信商户服务中心](https://mp.weixin.qq.com/paymch/readtemplate?t=mp/business/faq2_tmpl)
 
-* [商户平台开发者文档](http://pay.weixin.qq.com/wiki/doc/api/jsapi.php)
+* [商户平台开发者文档1](http://pay.weixin.qq.com/wiki/doc/api/index.html)
+
+* [商户平台开发者文档2](http://pay.weixin.qq.com/wiki/doc/api/jsapi.php)
+
+* [商户平台开发者文档3](http://pay.weixin.qq.com/wiki/doc/api/index.php?chapter=1_1)
 
 * [微信JS-SDK说明文档](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html)
 
