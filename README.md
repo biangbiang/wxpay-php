@@ -35,11 +35,15 @@ php项目基于微信支付JS SDK和JS API的接入开发
 
 ### 分享代码
 
-因为目前用的项目的框架是比较奇葩的，我之前已经把官方的代码临时整合并修改成适合项目的代码，已经不能直接用了，后面的日子将逐步等工作闲暇的时候，整理出直接能用的来分享给还没入坑有需要的童鞋们。
+因为目前用的项目的框架是比较奇葩的，我之前已经把官方的代码临时整合并修改成适合项目的代码，不能直接用了，后面的日子将逐步等工作闲暇的时候，整理出直接能用的来分享给还没入坑有需要的童鞋们。
+
+---
+
+## 代码相关
 
 ### 开发环境
 
-相关代码在下列环境中通过测试
+本地相关开发环境如下：
 
 * 编辑器: MacVim
 
@@ -48,3 +52,9 @@ php项目基于微信支付JS SDK和JS API的接入开发
 * nginx: 1.4.2
 
 * 操作系统: Yosemite 10.0.2
+
+### 创建相关文件
+
+    WxPay.pub.config.sample.php => WxPay.pub.config.php // 配置文件
+    access_token.sample.json => access_token.json       // 临时存储access_token
+    jsapi_ticket.sample.json => jsapi_ticket.json       // 临时存储jsapi_ticket
