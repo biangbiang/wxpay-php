@@ -58,3 +58,26 @@ php项目基于微信支付JS SDK和JS API的接入开发
     WxPay.pub.config.sample.php => WxPay.pub.config.php // 配置文件
     access_token.sample.json => access_token.json       // 临时存储access_token
     jsapi_ticket.sample.json => jsapi_ticket.json       // 临时存储jsapi_ticket
+
+### 代码文件结构
+
+    .
+    ├── LICENSE
+    ├── README.md
+    ├── conf
+    │   ├── WxPay.pub.config.php
+    │   └── WxPay.pub.config.sample.php
+    ├── index.php
+    ├── lib
+    │   ├── CommonUtilPub.php
+    │   ├── JsSdk.php
+    │   ├── SDKRuntimeException.php
+    │   ├── UnifiedOrderPub.php
+    │   └── WxpayClientPub.php
+    └── log
+        ├── access_token.json
+        ├── access_token.sample.json
+        ├── jsapi_ticket.json
+        └── jsapi_ticket.sample.json
+
+    3 directories, 14 files
