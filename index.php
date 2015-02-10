@@ -2,9 +2,14 @@
 include_once("conf/WxPay.pub.config.php");
 
 include_once("lib/JsSdk.php");
+include_once("lib/CommonUtilPub.php");
+include_once("lib/SDKRuntimeException.php");
+include_once("lib/WxpayClientPub.php");
+include_once("lib/UnifiedOrderPub.php");
 
 // 获取微信用户的openId，相信在接微信支付的时候，已经能够获取到openId了
-$openId = "o5k3_xxxxxxxxxxxxxxxxxx";
+//$openId = "o5k3_xxxxxxxxxxxxxxxxxx";
+$openId = "o5k3_tt26wXBIePg-DqA8DMgffkk";
 
 $appId = WxPayConfPub::APPID;
 $appSecret = WxPayConfPub::APPSECRET;
@@ -18,12 +23,21 @@ $nonceStr = $signPackage['nonceStr'];
 // 获取prepay_id
 $unifiedOrder = new UnifiedOrderPub();
 $unifiedOrder->setParameter("openid",$openId);//用户openId
-$unifiedOrder->setParameter("body", $orderGroupDesc);//商品描述
-$unifiedOrder->setParameter("out_trade_no", $orderGroupId);//商户订单号 
-$unifiedOrder->setParameter("total_fee", $totalPrice * 100);//总金额,单位为分
+$unifiedOrder->setParameter("body", "贡献一分钱");//商品描述
+$unifiedOrder->setParameter("out_trade_no", "123456");//商户订单号 
+$unifiedOrder->setParameter("total_fee", "1");//总金额,单位为分
 $unifiedOrder->setParameter("notify_url",WxPayConfPub::NOTIFY_URL);//通知地址 
 $unifiedOrder->setParameter("trade_type","JSAPI");//交易类型
 $unifiedOrder->setParameter("nonce_str", $nonceStr);//随机字符串
+//非必填参数，商户可根据实际情况选填
+//$unifiedOrder->setParameter("sub_mch_id","XXXX");//子商户号  
+//$unifiedOrder->setParameter("device_info","XXXX");//设备号 
+//$unifiedOrder->setParameter("attach","XXXX");//附加数据 
+//$unifiedOrder->setParameter("time_start","XXXX");//交易起始时间
+//$unifiedOrder->setParameter("time_expire","XXXX");//交易结束时间 
+//$unifiedOrder->setParameter("goods_tag","XXXX");//商品标记 
+//$unifiedOrder->setParameter("openid","XXXX");//用户标识
+//$unifiedOrder->setParameter("product_id","XXXX");//商品ID
 $prepayId = $unifiedOrder->getPrepayId();
 
 // 计算paySign
@@ -36,12 +50,6 @@ $payPackage = [
 ];
 $paySign = $unifiedOrder->getSign($payPackage);
 $payPackage['paySign'] = $paySign;
-
-$result = [
-    "prepayId" => $prepayId,
-    "payPackage" => $payPackage,
-    "signPackage" => $signPackage
-];
 
 ?>
 
