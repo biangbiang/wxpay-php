@@ -1,7 +1,8 @@
 <?php
+include_once("conf/WxPay.pub.config.php");
 
-// 获取微信用户的openId，这里调用的是项目里的
-$openId = $this->getOpenId();
+// 获取微信用户的openId，相信在接微信支付的时候，已经能够获取到openId了
+$openId = "o5k3_xxxxxxxxxxxxxxxxxx";
 
 $jssdk = new JsSdk();
 $signPackage = $jssdk->GetSignPackage();
