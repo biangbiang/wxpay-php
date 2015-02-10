@@ -1,2 +1,4 @@
-# wxpay-php
-微信支付基于JS SDK和JS API的接入开发
+wxpay-php
+=========
+
+php项目基于微信支付JS SDK和JS API的接入开发
