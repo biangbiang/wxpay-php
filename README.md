@@ -25,3 +25,5 @@ php项目基于微信支付JS SDK和JS API的接入开发
 
 * [JSSDK demo页面](http://demo.open.weixin.qq.com/jssdk/)
 
+* [JSSDK demo示例代码下载](http://demo.open.weixin.qq.com/jssdk/sample.zip)
+
