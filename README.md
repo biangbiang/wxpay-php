@@ -85,21 +85,27 @@ php项目基于微信支付JS SDK和JS API的接入开发
 
     .
     ├── LICENSE
-    ├── README.md
-    ├── conf
-    │   ├── WxPay.pub.config.php
-    │   └── WxPay.pub.config.sample.php
-    ├── index.php
-    ├── lib
-    │   ├── CommonUtilPub.php
-    │   ├── JsSdk.php
-    │   ├── SDKRuntimeException.php
-    │   ├── UnifiedOrderPub.php
-    │   └── WxpayClientPub.php
-    └── log
-        ├── access_token.json
-        ├── access_token.sample.json
-        ├── jsapi_ticket.json
-        └── jsapi_ticket.sample.json
+    ├── README.md -------------------------说明文档
+    ├── callback --------------------------回调
+    │   └── notifyUrl.php -----------------回调接口文件
+    ├── conf ------------------------------配置
+    │   ├── WxPay.pub.config.php ----------配置文件
+    │   └── WxPay.pub.config.sample.php ---配置文件样本
+    ├── index.php -------------------------主入口文件
+    ├── lib -------------------------------类库
+    │   ├── CommonUtilPub.php -------------所有接口的基类
+    │   ├── JsSdk.php ---------------------微信支付新推出的js sdk
+    │   ├── Log.php -----------------------日志类库
+    │   ├── SDKRuntimeException.php -------异常类库
+    │   ├── UnifiedOrderPub.php -----------统一支付接口类
+    │   ├── WxpayClientPub.php ------------请求型接口的基类
+    │   └── WxpayServerPub.php ------------响应型接口的基类
+    ├── log -------------------------------日志
+    │   ├── access_token.json -------------access_token临时存储文件
+    │   ├── access_token.sample.json ------access_token临时存储文件样本
+    │   ├── jsapi_ticket.json -------------jsapi_ticket临时存储文件
+    │   ├── jsapi_ticket.sample.json ------jsapi_ticket临时存储文件样本
+    │   └── notify_url.log ----------------回调接口日志文件
+    └── master.sh -------------------------git提交shell懒人脚本
 
-    3 directories, 14 files
+    4 directories, 19 files
