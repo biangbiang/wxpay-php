@@ -2,5 +2,4 @@
 *.swp
 master.sh
 conf/WxPay.pub.config.php
-log/access_token.json
-log/jsapi_ticket.json
+log/*
