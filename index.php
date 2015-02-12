@@ -22,7 +22,7 @@ $nonceStr = $signPackage['nonceStr'];
 // 获取prepay_id
 $unifiedOrder = new UnifiedOrderPub();
 $unifiedOrder->setParameter("openid",$openId);//用户openId
-$unifiedOrder->setParameter("body", "贡献一分钱");//商品描述
+$unifiedOrder->setParameter("body", "贡献一分钱");//商品描述，不能超过32个字符，否则会报错
 $unifiedOrder->setParameter("out_trade_no", "123456");//商户订单号 
 $unifiedOrder->setParameter("total_fee", "1");//总金额,单位为分
 $unifiedOrder->setParameter("notify_url",WxPayConfPub::NOTIFY_URL);//通知地址 
