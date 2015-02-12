@@ -20,6 +20,7 @@ $nonceStr = $signPackage['nonceStr'];
 
 
 // 获取prepay_id
+// 具体参数设置可以看文档http://pay.weixin.qq.com/wiki/doc/api/index.php?chapter=9_1
 $unifiedOrder = new UnifiedOrderPub();
 $unifiedOrder->setParameter("openid",$openId);//用户openId
 $unifiedOrder->setParameter("body", "贡献一分钱");//商品描述，不能超过32个字符，否则会报错
